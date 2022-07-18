@@ -5,8 +5,9 @@ class Post(models.Model):
   author = models.CharField(max_length = 200)
   topic = models.CharField(max_length = 200)
   content = models.TextField(max_length= 200000)
-  url = models.URLField(max_length=200)
+  url = models.ImageField(upload_to='posts_images', blank=True)
   likes = models.IntegerField(null=True)
+
   comments = models.IntegerField(null=True)
 
   def __str__(self):
