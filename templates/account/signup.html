@@ -25,7 +25,8 @@
 
 </head>
 {% load crispy_forms_tags %}
-<header class="header ">
+
+<header class="header header-border">
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
@@ -57,7 +58,7 @@
                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         {{ user.email }}
                                     </a>
-                                    <div class="dropdown-menu dropdown-menu-right navbar-color" aria-labelledby="userMenu">
+                                    <div class="dropdown-menu dropdown-menu-right drop_down_color" aria-labelledby="userMenu">
                                         <a class="dropdown-item text-muted pl-3 pr-3" href="{% url 'account_change_password' %}">Change
                                             password</a>
                                         <div class="dropdown-divider"></div>
@@ -84,7 +85,7 @@
 
 {% load crispy_forms_tags %}
 
-<div class="register-page" style="height:600px !important;">
+<div class="register-page" style="height:700px !important;">
     <div class="register-box">
         <div class="card">
             <div class="card-body register-card-body">
@@ -141,44 +142,12 @@
 </div>
 
 <link href="https://adminlte.io/themes/v3/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-<footer class="footer pt-5 text-muted">
-    <div class="row mt-5 mb-5 pb-5">
-        <div class="col-2"></div>
-        <div class="col-2">
-            <div>
-                <img src="{% static 'images/logo.png' %}" class="img-fluid" alt="DjangoX logo" style="height:20px"/>
-                <p>Building on admin dashboard has never been easier....</p>
-            </div>
-        </div>
-        <div class="col-2">
-            <h6 style="color:#fff">Quick Access</h3>
-                <p>Blogs</p>
-        </div>
-        <div class="col-2">
-            <h6 style="color:#fff">Help</h3>
-                <span>KnowLedge Base</span>
-                <span>Get Support</span>
-        </div>
-        <div class="col-2">
-            <h6 style="color:#fff">Popular Posts</h3>
-                <p>Pleaess subscribe for the latest news on ....</p>
-                <div class="d-flex">
-                    <input type='text' class="form-control" placeholder="Email Address">
-                    <button class="btn btn-primary"></button>
-                </div>
-        </div>
-        <div class="col-2"></div>
+<footer class="main-footer footer_margin" >
+    <div class="float-right d-none d-sm-block">
+        <b>Version</b> 3.2.0
     </div>
-    <div class="row separate-border">
-        <div class="col-2"></div>
-        <div class="col-8 d-flex mt-3">
-            <p class="col-8">Copyright@ 2014-2022 AdminLTE Allright s reserved. Privacy Policy</p>
-            <p class="col-4 text-right">Teams & Conditions Privacy Policy</p>
-        </div>
-        <div class="col-2"></div>
-    </div>
+    <strong>Copyright © 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
 </footer>
-
 {% block javascript %}
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
