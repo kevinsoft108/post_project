@@ -9,22 +9,22 @@
         <div class="bg-white border rounded-5">
             <section class="p-4 text-center w-100">
                 {% for topic in topics %}
-                    <a type="button" href="{% url 'topic' topic.id %}" class="btn btn-outline-primary btn-rounded pl-4 pr-4 m-2 {% if selected_topic_id == topic.id %} active {% endif %}" style="border-radius: 10rem"> {{ topic.name }} </a>
+                    <a type="button" href="{% url 'topic' topic.id %}" class="btn btn-outline-primary btn-rounded pl-4 pr-4 m-2 {% if title == topic.id %} active {% endif %}" style="border-radius: 10rem"> {{ topic.name }} </a>
                 {% endfor %}
             </section>
         </div>
     </div>
 
     {% if posts.count > 0 %}
-
-    <div class="row">
+    {{ STATIC_URL }}
+    <div class="row d-flex">
         {% for post in posts %}
-            <div class="col-4">
+            <div class="col-4 height" >
                 <div class="card card-widget">
                     <div class="card-header">
                         <div class="user-block">
                             {% if post.image.url != '' %}
-                                <img class="img-circle" src="/static/images{{ post.image.url }}"
+                                <img class="img-circle" src="{% static  post.image.url  %}"
                                      alt="User Image">
                             {% else %}
                                 <img class="img-circle" src="/static/images/avatar_placeholder.png"
@@ -36,6 +36,8 @@
                     </div>
                     <div class="card-body">
                         <p>{{ post.content }}</p>
+                    </div>
+                    <div class="card-footer footer-color" >
                         <span class="float-right text-muted">{{ post.likes }} likes - {{ post.comments }} comments</span>
                     </div>
                 </div>
@@ -86,4 +88,17 @@
             No Results
         </div>
     {% endif %}
+    <script>
+    var max_height = 0
+    $( document ).ready(function() {
+       $('.height').each(function( index, element ){
+          height = ( $( this ).height() );
+          if (height > max_height) {
+            max_height = height;
+          }
+      });
+
+       $('.height').height(max_height);
+    });
+    </script>
 {% endblock content %}

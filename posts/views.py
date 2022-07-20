@@ -26,11 +26,11 @@ class PostListView(LoginRequiredMixin, generic.ListView):
     def get_context_data(self, **kwargs):
         blogs_list = super().get_context_data(**kwargs)
         topic = Topics.objects.all()
-        selected_topic = 1
+        title = 1
         context = {
             'blogs_list': blogs_list,
             'posts': blogs_list['object_list'],
-            'selected_topic_id': selected_topic,
+            'title': title,
             'topics': topic
         }
         context = {**context, **blogs_list}
@@ -47,13 +47,13 @@ class TopicListView(generic.ListView):
         return posts
 
     def get_context_data(self, **kwargs):
-        selected_topic = self.kwargs['pk']
+        title = int(self.kwargs['pk'])
         blogs_list = super().get_context_data(**kwargs)
         topic = Topics.objects.all()
         context = {
             'blogs_list': blogs_list,
             'posts': blogs_list['object_list'],
-            'selected_topic_id': selected_topic,
+            'title': title,
             'topics': topic
         }
         context = {**context, **blogs_list}

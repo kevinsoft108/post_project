@@ -289,6 +289,9 @@ progress {
     z-index: 9;
 }
 
+.card-height {
+     height: 90% !important;
+}
 .header-border {
     background-color: #fff !important;
     border-bottom: 1px solid #9a8d8d;
@@ -298,6 +301,9 @@ progress {
     background-color: #fff;
 }
 
+.footer-color {
+    background-color: #fff !important;
+}
 /*@media (min-width: 576px) {*/
     /*.container {*/
         /*max-width: 540px;*/
