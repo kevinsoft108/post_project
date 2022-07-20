@@ -2,18 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="232ef2ab-7e1b-48ad-b6a5-053ccf13a80c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/posts_images/avatar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/posts_images/avatar_placeholder.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/posts_images/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/posts_images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/posts_images/user5-128x128.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/admin.py" afterPath="$PROJECT_DIR$/posts/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/models.py" afterPath="$PROJECT_DIR$/posts/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/urls.py" afterPath="$PROJECT_DIR$/posts/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/views.py" afterPath="$PROJECT_DIR$/posts/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/base.css" afterPath="$PROJECT_DIR$/static/css/base.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/posts/index.html" afterPath="$PROJECT_DIR$/templates/posts/index.html" />
     </list>
     <ignored path="djangox.iws" />
@@ -81,8 +69,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/posts/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+            <state relative-caret-position="646">
+              <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -1130,8 +1118,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/posts/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        <state relative-caret-position="646">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#a#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>

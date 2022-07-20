@@ -20,7 +20,7 @@
     <div class="row d-flex">
         {% for post in posts %}
             <div class="col-4 height" >
-                <div class="card card-widget">
+                <div class="card card-widget card_height">
                     <div class="card-header">
                         <div class="user-block">
                             {% if post.image.url != '' %}
@@ -97,8 +97,9 @@
             max_height = height;
           }
       });
+        console.log(max_height)
+       $('.card_height').height(max_height);
 
-       $('.height').height(max_height);
     });
     </script>
 {% endblock content %}
