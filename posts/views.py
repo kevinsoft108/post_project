@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-from .models import Post, topics
+from .models import Post, Topics
 
 
 # Create your views here.
@@ -19,18 +19,18 @@ class PostListView(LoginRequiredMixin, generic.ListView):
     model = Post
 
     def get_queryset(self, **kwargs):
-        topic_name = 'Recursos H'
-        posts = Post.objects.filter(topic=topic_name)
+        topic_id = 1
+        posts = Post.objects.filter(topic_id=topic_id)
         return posts
 
     def get_context_data(self, **kwargs):
         blogs_list = super().get_context_data(**kwargs)
-        topic = topics.objects.all()
-        title = 'Recursos H'
+        topic = Topics.objects.all()
+        selected_topic = 1
         context = {
             'blogs_list': blogs_list,
             'posts': blogs_list['object_list'],
-            'title': title,
+            'selected_topic_id': selected_topic,
             'topics': topic
         }
         context = {**context, **blogs_list}
@@ -47,13 +47,13 @@ class TopicListView(generic.ListView):
         return posts
 
     def get_context_data(self, **kwargs):
-        title = self.kwargs['pk']
+        selected_topic = self.kwargs['pk']
         blogs_list = super().get_context_data(**kwargs)
-        topic = topics.objects.all()
+        topic = Topics.objects.all()
         context = {
             'blogs_list': blogs_list,
             'posts': blogs_list['object_list'],
-            'title': title,
+            'selected_topic_id': selected_topic,
             'topics': topic
         }
         context = {**context, **blogs_list}
